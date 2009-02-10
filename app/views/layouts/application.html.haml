@@ -1,0 +1,8 @@
+!!! 1.1
+%head
+  %title= "Welcome to BackupMyMail!"
+  = stylesheet_link_tag "site"
+%body
+  - flash.each do |key, msg|
+    %div{ :id => key }= simple_format(msg)
+  = yield

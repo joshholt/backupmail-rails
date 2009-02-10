@@ -1,0 +1,22 @@
+#content
+  - form_for(@account, :url => {:action => :doBackup}, :html => {:method => "post"})  do |f|
+    #inner-form
+      .frm_fields
+        %span{:label_for => "email"}= "Email Address: "
+        %span= has_errors?(@account,:email)
+      .frm_fields
+        %span{:label_for => "username"}= "User Name: "
+        %span= has_errors?(@account,:username)
+      .frm_fields
+        %span{:label_for => "password"}= "Password: "
+        %span= has_errors?(@account,:password)
+      .frm_fields
+        %span{:label_for => "server"}= "Server Address: "
+        %span= has_errors?(@account,:server)
+      .frm_fields
+        %span{:label_for => "port"}= "Server Port: "
+        %span= has_errors?(@account,:port)
+      .frm_fields
+        %span{:label_for => "ssl"}= "Use SSL? "
+        %span= f.check_box(:ssl)
+        %span.buttons= submit_tag("Backup")

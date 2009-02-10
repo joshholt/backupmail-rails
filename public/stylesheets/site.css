@@ -1,0 +1,10 @@
+body { background:#555; margin:0; padding:0; }
+#content { margin:50px auto; padding:8px; border:10px solid #DDD; background:lightSteelBlue; width:600px; height:250px; }
+#inner-form {margin:10px auto; padding:30px; border:1px solid #FFF; width:500px;}
+#inner-form .frm_fields { margin:4px; }
+#inner-form .frm_fields > span:first-child { display:block; width:150px; float:left; text-align:right;padding-right:5px; }
+#inner-form .frm_fields span.buttons {display:block;float:right; margin-right:70px;}
+#inner-form .frm_fields small.errors { display:block; float:right; color:red;}
+#inner-form .frm_fields small.errors ul { list-style-type:none; margin:0;padding:0;}
+input.errors { border:1px solid red; color:red; }
+#error { margin:5px auto; padding:0 9px 0 9px; width:600px; background:pink; border:1px solid red; font-size: 80%; text-align: center; }
