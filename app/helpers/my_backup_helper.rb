@@ -16,18 +16,17 @@
 #
 # bmm_process.runBackup
 #******************************************************************************
+modules_path = File.join(File.dirname(__FILE__),'/../../lib','modules')
+module_files = Dir["#{modules_path}/*.bmm_mod.rb"]
+module_files.each { |modFile| require modFile }
+
+
 module MyBackupHelper
   class BackupMyMail
     attr_accessor :email, :username, :password, :port, :ssl, :server, :backup_dir
-    
-  	modules_path = File.join(File.dirname(__FILE__),'lib','modules')
-  	module_files = Dir["#{modules_path}/*.bmm_mod.rb"]
-  	module_files.each { |modFile| require modFile }
-
-  	if module_files.size > 0
+  	
   		include Backup::Mail::Pop3
   		include Backup::Mail::ToMbox
-  	end
   	
   	def initialize(options)
   	  begin
@@ -37,20 +36,21 @@ module MyBackupHelper
   	    @port       = options.port
   	    @server     = options.server
   	    @ssl        = options.ssl
-  	    @backup_dir = File.join(File.dirname(__FILE__),'backups',"#{Time.now.to_f}_#{@email}") if @email
-  	  rescue => exception
-  	    logger.info("An Exception Occured during initialization: #{exception.class}, #{exception}")
+  	    @backup_dir = File.join(File.dirname(__FILE__),"/../../public","backups","#{Time.now.to_f}_#{@email}") if @email
+  	  rescue Exception => exception
+  	    #logger.info("An Exception Occured during initialization: #{exception.class}, #{exception}")
   	    raise "\r\nWe are not able to process your backup at this time.\r\n We apologize for the inconvenience."
       end
   	end
   	
   	def runBackup()
   	  begin
-  	    Backup::Mail.fetch_and_store()
+  	    fetch_and_store()
   		  squash_emails()
   	  rescue Exception => e
-  	    logger.info("An Exception Occured while running the backup: #{e.class} => #{e}")
-  	    false
+  	    #logger.info("An Exception Occured while running the backup: #{e.class} => #{e}")
+  	    raise "\r\n While running the backup, #{e}"
+  	    #false
   	  else
   	    true
   	  end

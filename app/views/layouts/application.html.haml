@@ -2,7 +2,13 @@
 %head
   %title= "Welcome to BackupMyMail!"
   = stylesheet_link_tag "site"
+  = javascript_include_tag "jquery.js", "jquery-ui.js", "jrails.js", "jquery_text_field_hints.js", "application.js"
 %body
-  - flash.each do |key, msg|
-    %div{ :id => key }= simple_format(msg)
-  = yield
+  #container
+    #header
+      - flash.each do |key, msg|
+        %div{ :id => key }= simple_format(msg)
+    #content
+      = yield
+  #footer
+    %h1="BackUpMyMail -- Gmail Edition"

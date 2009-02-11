@@ -50,11 +50,16 @@ module Backup
   			end
   			
   			def write_archive(backupDir)
-  			  mbox_file = File.open("#{backupDir}/inbox.mbox", 'a')  do |archive|
-  			    archive.write(make_header())
-  			    archive.write(escape())
-  			    archive.write("")
-			    end
+  			  begin
+  			    mbox_file = File.open("#{backupDir}/inbox.mbox", 'a')  do |archive|
+    			    archive.write(make_header())
+    			    archive.write(escape())
+    			    archive.write("")
+  			    end
+  			  rescue Exception => e
+  			   raise
+  			  end
+  			  
 			  end  			
 		  end
 		  

@@ -1,2 +1,4 @@
-#content
-  %h1="This will be the Thank You Page!"
+- if @return_html
+  = simple_format(@return_html)
+- else
+  %h1= "Some has gone wrong, check the message above!"

@@ -13,9 +13,9 @@ module ApplicationHelper
   
   def error_messages_for_attribute(object, attribute)
       messages = object.errors.on(attribute).collect
-      messages = messages.size > 1 ? messages.join(',') : messages
+      messages = messages.size > 1 ? messages.join(' and ') : messages
       html = <<-TAG
-      <input id="email_account_#{attribute}" class="errors" name="email_account[#{attribute}]" size="30" type="#{attribute.to_s == "password" ? "password" : "text"}" value="#{messages}"/>
+      <input id="email_account_#{attribute}" class="errors" name="email_account[#{attribute}]" size="30" type="#{attribute.to_s == "password" ? "password" : "text"}" title="#{messages}"/>
       TAG
   end
   

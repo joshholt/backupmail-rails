@@ -31,7 +31,8 @@ module Backup
 					account.auth_only(@username,@password)
 	  	  rescue Exception => error
 	  	  	#puts "An Exception Occured: #{error.class} => #{error}"
-	  	    false
+	  	    #false
+	  	    raise
 	  	  else
 	  	    true
 	  	  end
@@ -44,9 +45,8 @@ module Backup
 					end
 					Net::POP3.start(@server, @port, @username, @password) do |account|
 						if account.mails.empty?
-							puts "There are no new emails in your inbox..."
+							return "There are no new emails in your inbox..."
 						else
-							puts "Downloading emails..."
 							account.each_mail do |message|
 								msg_id = message.unique_id
 								if !File.exists?("#{@backup_dir}")
@@ -56,12 +56,12 @@ module Backup
 									f.write message.pop
 								end # **** End storage
 							end # **** End Loop
-							puts "Successfully downloaded #{account.mails.size} emails"
+							return "Successfully downloaded #{account.mails.size} emails"
 						end # **** End Condition
 				
 					end #**** End AccountAccess ****
 				rescue => exception
-					raise "The following execption occured: #{exception.message}"
+					raise
 				end 	
 			end #**** End FetchAndStore ****
 			
