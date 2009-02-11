@@ -45,21 +45,21 @@ module MyBackupHelper
   	
   	def runBackup()
   	  begin
-  	    fetch_and_store()
+  	    result = fetch_and_store()
   		  squash_emails()
   	  rescue Exception => e
   	    #logger.info("An Exception Occured while running the backup: #{e.class} => #{e}")
   	    raise "\r\n While running the backup, #{e}"
   	    #false
   	  else
-  	    true
+  	    result
   	  end
   	end
   	
   	def squash_emails
   		files = Dir["#{@backup_dir}/*.eml"]
   		files.each do |filename|
-  			Backup::Mail::ToMbox.CurrentEmail.new(open(filename).readlines).write_archive(@backup_dir)
+  			CurrentEmail.new(open(filename).readlines).write_archive(@backup_dir)
   	  end
   	end
   	

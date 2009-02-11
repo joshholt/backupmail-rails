@@ -1,4 +1,5 @@
 - if @return_html
-  = simple_format(@return_html)
+  .thank_you
+    = @return_html
 - else
-  %h1= "Some has gone wrong, check the message above!"
+  %h1= "Something has gone wrong, check the message above!"

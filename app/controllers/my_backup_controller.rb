@@ -11,25 +11,21 @@ class MyBackupController < ApplicationController
         # Great we're valid so let's go get the mail!!
 	      @bmm_process = MyBackupHelper::BackupMyMail.new(@account)
 	      if @bmm_process.authenticated?
-	        flash[:notice] = "We were able successfully connect to your mailbox!"
-	        if @bmm_process.runBackup()
-	          @return_html = <<-RETVAL
-	          \tThank you for backing up your mail! We feel better now, and surely you do right?\r\n
-	          You know all this talk about backing up your data being hard, after this you have the\r\n
-	          right to argue until you run out of breath.\r\n
-	          
-	          \t\t*** Disclamer ***\r\n
-	          \t\t\tWe are in no way suggesting that you run yourself out of breath...\r\n
-	          \t\t\twe really can't have that on our conscience...\r\n
-	                  
-	           \t\t--- Whew! now that we have that out of the way, feel free to run out of breath if that's your bag!
-	                 
-	          ---
-	            Again thank you for backing up your Mail!
-	          RETVAL
+	        flash_message = "We were able to successfully connect to your mailbox!\n"
+	        result_of_backup = @bmm_process.runBackup()
+	        flash_message += result_of_backup
+	        flash.now[:notice] = flash_message
+	        case result_of_backup
+	          when /^Successfully/
+	            thankYouText = thank_you_message()
+	            # obsfucated_Link will be generated with SHA1::Hash
+	            backup_link = MailBackup.create({:file_path => @bmm_process.backup_dir})
+	            thankYouText = thankYouText % backup_link.obsfucated_link
+	          when /^There are no new emails in your inbox/
+	            thankYouText = thank_you_no_backup
 	        end
+	        @return_html = RedCloth.new(thankYouText).to_html()
 	      end
-	      #redirect_to --> the thank you page with or w/o link...
 	    else
 	      # rendering the index action here will show validation messages in the text boxes
 	      # b/c the information required for the account setup is missing or invalid.
@@ -37,9 +33,20 @@ class MyBackupController < ApplicationController
 	    end
 	  rescue Exception => e 
 	    # uh oh, well at least we don't get some crazy blow up page!
-	    flash[:error] = "An Execption has occured: #{e}" # --> this will show the end user an nice pretty message
+	    flash[:notice] = nil 
+	    flash[:error]  = "An Execption has occured: #{e}" # --> this will show the end user an nice pretty message
 	    redirect_to root_url # --> so we send them home to try again with the reason for the failure
 	  end
 	end
 	
+	def download
+	  begin
+	    @customers_backup = MailBackup.find_by_obsfucated_link(params[:id])
+	    folder = @customers_backup.file_path.split('/')[-1]
+	    send_file("#{@customers_backup.file_path}/#{folder}-backup.zip")
+	  rescue Exception => e
+	    flash[:error]  = "An Execption has occured: #{e}"
+	    render :text => "#{e}"
+	  end
+	end
 end

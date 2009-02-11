@@ -56,7 +56,7 @@ module Backup
 									f.write message.pop
 								end # **** End storage
 							end # **** End Loop
-							return "Successfully downloaded #{account.mails.size} emails"
+							return "Successfully fetched #{account.mails.size} emails"
 						end # **** End Condition
 				
 					end #**** End AccountAccess ****

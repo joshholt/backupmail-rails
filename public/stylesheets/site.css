@@ -5,9 +5,10 @@ body { background:#CCC; margin:0; padding:0; height:100%;}
 #container #header { position:relative; border-bottom: 1px solid #FFF; height:100px; background:#EEE; margin:0; padding-top:20px;}
 #container #header #error { position:relative; margin:0 auto; padding:0 9px 0 9px; width:600px; background:pink; border:1px solid red; font-size: 80%; text-align: center; }
 #container #header #notice { position:relative; margin:0 auto; padding:0 9px 0 9px; width:600px; background:Aquamarine; border:1px solid green; font-size: 80%; text-align: center; }
-#container #content { position:relative; margin:0 auto; padding:9px; border-left:1px solid #999; border-bottom:1px solid #999; border-right:1px solid #999; background:lightSteelBlue; width:600px; height:250px}
+#container #content { position:relative; margin:0 auto; padding:9px; border-left:1px solid #999; border-bottom:1px solid #999; border-right:1px solid #999; background:lightSteelBlue; width:600px;}
+#container #content .thank_you { position: relative; margin:0 auto; width:550px; background:#EEE; border:2px solid #DDD; padding:5px 5px 4em 5px; }
 #container #content form { position:relative;}
-#container #content form #inner-form { position:relative; margin:10px auto; padding:30px; border:1px solid #FFF; width:500px;}
+#container #content form #inner-form { position:relative; margin:10px auto; padding:30px;  background:#EEE; border: 2px solid #DDD; width:500px;}
 #container #content form #inner-form  .frm_fields { margin:4px; position:relative; }
 #container #content form #inner-form  .frm_fields > span:first-child { position:relative; display:block; width:150px; float:left; text-align:right;padding-right:5px; }
 #container #content form #inner-form  .frm_fields span.buttons { position:relative; display:block;float:right; margin-right:70px;}

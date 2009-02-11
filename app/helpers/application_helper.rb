@@ -6,7 +6,7 @@ module ApplicationHelper
       error_messages_for_attribute(object,attribute)
     else
       html = <<-TAG
-      <input id="email_account_#{attribute}" name="email_account[#{attribute}]" size="30" type="#{attribute.to_s == "password" ? "password" : "text"}"/>
+      <input id="email_account_#{attribute}" name="email_account[#{attribute}]" size="30" type="#{attribute.to_s == "password" ? "password" : "text"}" value="#{object.send(attribute)}"/>
       TAG
     end
   end
