@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     text_to_process += "__We are in no way suggesting that you try to turn blue...__\n"
     text_to_process += "__we really can't have that on our conscience...__\n\n"
     text_to_process += "__-- Whew! now that we have that out of the way,__ \"click here\":http://theholtsare.thruhere.net:9921/my_backup/download/%s to download your backup.\n\n"
-    text_to_process += "--\nAgain thank you for choosing BackUpMyMail\n__The BackUpMyMail Team__\n__holt.josh@gmail.com__"
+    text_to_process += "--\nAgain thank you for choosing BackUpMyMail\n__The BackUpMyMail Team__\n__holt.josh@gmail.com__\n\"Click Here\":http://theholtsare.thruhere.net:9921/ to go back to the home page."
     return text_to_process
   end
   
@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
     text_to_process += "__If this message is making your blood pressure rise,__\n"
     text_to_process += "__turn off your monitor and take a few deep breaths...__\n"
     text_to_process += "__We really hope you aren't too disturbed, you can come back, we will be here to help you through it.__\n\n"
-    text_to_process += "--\nAgain thank you for choosing BackUpMyMail\n__The BackUpMyMail Team__\n__holt.josh@gmail.com__"
+    text_to_process += "--\nAgain thank you for choosing BackUpMyMail\n__The BackUpMyMail Team__\n__holt.josh@gmail.com__\n\"Click Here\":http://theholtsare.thruhere.net:9921/ to go back to the home page."
     return text_to_process
   end
   
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
     text_to_process += "__Now that you know how easy it is to backup your mail using BackUpMyMail,__\n"
     text_to_process += "__go tell your friends, they will thank you...__\n"
     text_to_process += "__Oh did I mention the source is on GitHub check it out \"here\":http://github.com/joshholt __\n\n"
-    text_to_process += "--\nAgain thank you for choosing BackUpMyMail\n__The BackUpMyMail Team__\n__holt.josh@gmail.com__"
+    text_to_process += "--\nAgain thank you for choosing BackUpMyMail\n__The BackUpMyMail Team__\n__holt.josh@gmail.com__\n\"Click Here\":http://theholtsare.thruhere.net:9921/ to go back to the home page."
     return text_to_process
   end
 end

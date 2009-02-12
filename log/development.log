@@ -13869,3 +13869,819 @@ Streaming file /Users/joshholt/Dev/Ruby/REGULAR/BackupMyMail-rails/app/helpers/.
   [4;35;1mBdrbJobQueue Load (0.5ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 07:39:05' ) LIMIT 1[0m
   [4;36;1mBdrbJobQueue Load (0.5ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 07:39:10' ) LIMIT 1[0m
 DEPRECATION WARNING: ActionMailer::Base.register_template_extension has been deprecated.Use ActionView::Base.register_template_extension instead. (called from /Users/joshholt/Dev/Ruby/REGULAR/BackupMyMail-rails/config/initializers/mailer_config.rb:9)
+DEPRECATION WARNING: ActionMailer::Base.register_template_extension has been deprecated.Use ActionView::Base.register_template_extension instead. (called from /Users/joshholt/Dev/Ruby/REGULAR/BackupMyMail-rails/config/initializers/mailer_config.rb:9)
+
+
+Processing MyBackupController#index (for 127.0.0.1 at 2009-02-12 02:58:59) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 47ms (View: 27, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MyBackupController#doBackup (for 127.0.0.1 at 2009-02-12 02:59:19) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"f3c98972bf2e962d2994776ce303d16f500ba4f4"}
+Redirected to http://localhost:9921/
+Completed in 685ms (DB: 0) | 302 Found [http://localhost/my_backup/doBackup]
+
+
+Processing MyBackupController#index (for 127.0.0.1 at 2009-02-12 02:59:20) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 40ms (View: 22, DB: 0) | 200 OK [http://localhost/]
+DEPRECATION WARNING: ActionMailer::Base.register_template_extension has been deprecated.Use ActionView::Base.register_template_extension instead. (called from /Users/joshholt/Dev/Ruby/REGULAR/BackupMyMail-rails/config/initializers/mailer_config.rb:9)
+DEPRECATION WARNING: ActiveRecord::Base.allow_concurrency= has been deprecated and no longer has any effect. Please remove all references to allow_concurrency=.. (called from allow_concurrency= at /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:96)
+DEPRECATION WARNING: ActionMailer::Base.register_template_extension has been deprecated.Use ActionView::Base.register_template_extension instead. (called from /Users/joshholt/Dev/Ruby/REGULAR/BackupMyMail-rails/config/initializers/mailer_config.rb:9)
+DEPRECATION WARNING: ActiveRecord::Base.allow_concurrency= has been deprecated and no longer has any effect. Please remove all references to allow_concurrency=.. (called from allow_concurrency= at /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:96)
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 07:59:50' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 127.0.0.1 at 2009-02-12 02:59:54) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 40ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 07:59:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:05' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 127.0.0.1 at 2009-02-12 03:00:09) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"f3c98972bf2e962d2994776ce303d16f500ba4f4"}
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 697ms (View: 12, DB: 0) | 200 OK [http://localhost/my_backup/doBackup]
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:00:10 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:15' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:20' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:00:21) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 42ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:00:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:25' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:01:26) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 799ms (View: 12, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:01:28 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:31' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:01:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:10' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:02:13) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 846ms (View: 12, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:02:14 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:24' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:24' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:02:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:03:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:40' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:04:41) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 39ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:04:55' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:04:57) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 831ms (View: 12, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:04:59 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:03' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:05:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:15' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:06:16) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 43ms (View: 23, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:20' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:06:20) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 44ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:35' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:06:38) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I4tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Redirected to http://theholtsare.thruhere.net:9921/
+Completed in 1404ms (DB: 0) | 302 Found [http://theholtsare.thruhere.net/my_backup/doBackup]
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:06:39) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 41ms (View: 23, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:50' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:06:53) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Redirected to http://theholtsare.thruhere.net:9921/
+Completed in 734ms (DB: 0) | 302 Found [http://theholtsare.thruhere.net/my_backup/doBackup]
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:06:54) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 40ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:06:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:10' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:07:12) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 40ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:25' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:07:25) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+0
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:07:26 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:30' ) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 6598ms (View: 12, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:07:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:08:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:09:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:10:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:20' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:11:22) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 41ms (View: 23, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:40' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:11:41) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+1
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:11:43 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:50' ) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 10514ms (View: 13, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:11:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:12:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:25' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:13:27) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+1
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 691ms (View: 12, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:13:29 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:31' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:13:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:14:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:15:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:20' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:16:22) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 40ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:30' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:40' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:16:42) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 42ms (View: 23, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:50' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:16:52) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:16:54 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:16:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:00' ) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 10760ms (View: 15, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:15' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:17:19) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 42ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:25' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:30' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:17:33) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 42ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+  [4;35;1mBdrbJobQueue Load (0.9ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:40' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:17:42) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:17:44 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:50' ) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 10375ms (View: 14, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:17:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:10' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:15' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:20' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:25' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:18:27) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+true
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 772ms (View: 12, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:18:29 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:32' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:35' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:40' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:45' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:50' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:18:55' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:00' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:05' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:10' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:19:11) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+true
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 738ms (View: 12, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+  [4;35;1mMailBackup Create (0.4ms)[0m   [0mINSERT INTO "mail_backups" ("file_path", "created_at", "obsfucated_link", "updated_at") VALUES('/Users/joshholt/Dev/Ruby/REGULAR/BackupMyMail-rails/app/helpers/../../public/backups/1234426751.71853_joshholt.testaccount@gmail.com', '2009-02-12 08:19:22', '127cca5b910589f9a9e85f41e0e43dc69dc796e7', '2009-02-12 08:19:22')[0m
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:19:22 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Your download is ready at BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for backing up your mail!</h2>
+  <p>We feel better now, and surely you do right?<br />
+  You&#8217;ve heard talk about the difficulties of backig up your email.<br />
+  Now you have the right to argue until you run out of breath.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>We are in no way suggesting that you try to turn blue&#8230;</i><br />
+  <i>we really can&#8217;t have that on our conscience&#8230;</i></p>
+  </blockquote>
+  <p><i>&#8212; Whew! now that we have that out of the way,</i> <a href="http://theholtsare.thruhere.net:9921/my_backup/download/127cca5b910589f9a9e85f41e0e43dc69dc796e7">click here</a> to download your backup.</p>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:27' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:27' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.2ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:27' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:30' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:35' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:40' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:45' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:50' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:19:55' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:00' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:05' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:10' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:15' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:20:16) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 40ms (View: 22, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:20' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:25' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:30' ) LIMIT 1[0m
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:20:32) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"0", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+false
+Sent mail to joshholt.testaccount@gmail.com
+
+Date: Thu, 12 Feb 2009 03:20:33 -0500
+From: joshholt.testaccount@gmail.com
+To: joshholt.testaccount@gmail.com
+Subject: Thank you for using BackUpMyMail
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<body>
+  <h2>Thank you for using BackUpMyMail!</h2>
+  <p>Unfortunately you did not have any new email to backup.<br />
+  Although this is unfortunate, you now know how easy it is to backup your email<br />
+  Please come back when you have new email to backup and we will take care of it.</p>
+  <blockquote>
+  <p>***Disclaimer***<br />
+  <i>If this message is making your blood pressure rise,</i><br />
+  <i>turn off your monitor and take a few deep breaths&#8230;</i><br />
+  <i>We really hope you aren&#8217;t too disturbed, you can come back, we will be here to help you through it.</i></p>
+  </blockquote>
+  <p>&#8212;<br />
+  Again thank you for choosing BackUpMyMail<br />
+  <i>The BackUpMyMail Team</i><br />
+  <i>holt.josh@gmail.com</i><br />
+  <a href="http://theholtsare.thruhere.net:9921/">Click Here</a> to go back to the home page.</p>
+</body>
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:35' ) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 4562ms (View: 13, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:40' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:45' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:50' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:20:55' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:00' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:05' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:10' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:15' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:20' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:25' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:30' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:35' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.4ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:40' ) LIMIT 1[0m
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:21:43) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 42ms (View: 24, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:45' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:50' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:21:55' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:22:00' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.3ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:22:05' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.2ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:22:10' ) LIMIT 1[0m
+  [4;36;1mBdrbJobQueue Load (0.4ms)[0m   [0;1mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:22:15' ) LIMIT 1[0m
+  [4;35;1mBdrbJobQueue Load (0.3ms)[0m   [0mSELECT * FROM "bdrb_job_queues" WHERE ( worker_name = 'background_backup_worker' AND taken = 0 AND scheduled_at <= '2009-02-12 08:22:20' ) LIMIT 1[0m
+DEPRECATION WARNING: ActionMailer::Base.register_template_extension has been deprecated.Use ActionView::Base.register_template_extension instead. (called from /Users/joshholt/Dev/Ruby/REGULAR/BackupMyMail-rails/config/initializers/mailer_config.rb:9)

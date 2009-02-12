@@ -1,0 +1,56 @@
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:24:02) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:24:34) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:24:42) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"0", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+false
+Sent mail to joshholt.testaccount@gmail.com
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 10349ms (View: 4, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:25:53) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:26:04) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:26:14) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"1", "port"=>"995", "username"=>"joshholt.testaccount@gmail.com", "server"=>"pop.gmail.com", "password"=>"I$tanB00L", "async"=>"1", "email"=>"joshholt.testaccount@gmail.com"}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+true
+Rendering template within layouts/application
+Rendering my_backup/doBackup
+Completed in 682ms (View: 3, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]
+
+
+Processing MyBackupController#index (for 65.1.237.251 at 2009-02-12 03:27:06) [GET]
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://theholtsare.thruhere.net/]
+
+
+Processing MyBackupController#doBackup (for 65.1.237.251 at 2009-02-12 03:27:08) [POST]
+  Parameters: {"commit"=>"Backup", "email_account"=>{"ssl"=>"0", "port"=>"", "username"=>"", "server"=>"", "password"=>"", "async"=>"0", "email"=>""}, "authenticity_token"=>"666a29c01aefc2a43cccdf56b0a1f5b5787022dc"}
+Rendering template within layouts/application
+Rendering my_backup/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://theholtsare.thruhere.net/my_backup/doBackup]

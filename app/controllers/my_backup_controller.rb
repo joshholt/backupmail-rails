@@ -12,6 +12,7 @@ class MyBackupController < ApplicationController
 	      @bmm_process = MyBackupHelper::BackupMyMail.new(@account)
 	      if @bmm_process.authenticated?
 	        flash_message = "We were able to successfully connect to your mailbox!\n"
+	        logger.info("#{@account.async}")
 	        if @account.async
 	          MiddleMan.worker(:background_backup_worker).async_run_bg_backup(:arg => @bmm_process)
 	          result_of_backup = "Running Background Backup..."

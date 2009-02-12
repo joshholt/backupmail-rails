@@ -11,8 +11,16 @@ class EmailAccount
 		@server 	=	options[:server]
 		@port			= options[:port]
 		@email		= options[:email]
-		@ssl			=	options.has_key?(:ssl) ? options[:ssl] : false
-		@async			=	options.has_key?(:async) ? options[:async] : false
+		if options.has_key?(:ssl)
+		  @ssl = options[:ssl] == "1" ? true : false
+		else
+		  @ssl = false
+		end
+		if options.has_key?(:async)
+		  @async = options[:async] == "1" ? true : false
+		else
+		  @async = false
+		end
 	end
 	
 end
